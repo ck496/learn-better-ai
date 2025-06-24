@@ -1,22 +1,26 @@
-import { Button, HStack, Image } from "@chakra-ui/react";
+import { Flex, HStack, Image, Spacer } from "@chakra-ui/react";
 import logo from "../assets/mainIcon.webp";
-import { HiddenSelect } from "@chakra-ui/react/dist/types/components/select/namespace";
 import SearchInput from "./SearchInput";
+import ColorModeToggle from "./ColorModeToggle";
+import NavBarButtons from "./NavBarButtons";
 
 const Navbar = () => {
   return (
-    <HStack justifyContent={"space-between"} padding={2}>
-      <Image src={logo} boxSize="50px"></Image>
-      <HStack>
-        <Button variant="ghost">Home</Button>
-        <Button variant="ghost">Notes</Button>
-        <Button variant="ghost">Paths</Button>
-        <Button variant="ghost">Tools</Button>
-        <Button variant="ghost">Leaderboards</Button>
-        <Button variant="ghost">About</Button>
+    <Flex as="nav" paddingX={4} paddingY={2} gap={0}>
+      <HStack gap={1} align="center">
+        <Image src={logo} boxSize="50px"></Image>
+        <NavBarButtons>Home</NavBarButtons>
+        <NavBarButtons>Notes</NavBarButtons>
+        <NavBarButtons>Tools</NavBarButtons>
+        <NavBarButtons>Leaderboards</NavBarButtons>
+        <NavBarButtons>About</NavBarButtons>
       </HStack>
-      <SearchInput />
-    </HStack>
+      <Spacer />
+      <HStack gap={4}>
+        <SearchInput />
+        <ColorModeToggle />
+      </HStack>
+    </Flex>
   );
 };
 

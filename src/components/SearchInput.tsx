@@ -16,7 +16,7 @@ const SearchInput = () => {
     >
       <InputGroup startElement={<LucideSearch size={16} />}>
         <Input
-        ref={ref}
+          ref={ref}
           borderRadius={20}
           placeholder="Search content..."
           variant="subtle"
