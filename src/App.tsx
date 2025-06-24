@@ -1,34 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "./App.css";
+import { Button, Grid, GridItem, Text } from "@chakra-ui/react";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <Grid
+      templateAreas={{
+        base: `"nav" "main" "bottom-list"`,
+        lg: `"nav nav"  "main side" "bottom-list bottom-list"`, //For devices larger than 1020 px show side bar etc
+      }}
+      templateColumns={{
+        base: "1fr",
+        lg: "2fr 1fr ",
+      }}
+    >
+      <GridItem area="nav" bg="tomato">
+        Nav
+      </GridItem>
+      <GridItem area="main" bg="papayawhip">
+        Main
+      </GridItem>
+      <GridItem area="side" bg="gold">
+        Side
+      </GridItem>
+      <GridItem area="bottom-list" bg="yellow">
+        Bottom List
+      </GridItem>
+    </Grid>
+  );
 }
 
-export default App
+export default App;
