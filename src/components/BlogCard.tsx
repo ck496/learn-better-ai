@@ -10,10 +10,10 @@ interface Props {
 const BlogCard = ({ blog, variant }: Props) => {
   return (
     <Card.Root size="sm" marginX={2} marginY={1}>
-      {variant === "blog-grid" ? <Image src={logo} /> : null}
+      {/* {variant === "blog-grid" ? <Image src={logo} /> : null} */}
       <Card.Body>
         <HStack justifyContent="space-between">
-          <Text fontSize="sm" color="#9764e7">
+          <Text fontSize="sm" color="#4b189b">
             {blog.topic}
           </Text>
         </HStack>

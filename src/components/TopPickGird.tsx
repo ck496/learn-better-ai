@@ -9,8 +9,9 @@ import {
 } from "@chakra-ui/react";
 import { FaTrophy } from "react-icons/fa";
 
-import useBlogs from "../hooks/useBlogs";
+import useBlogs, { Blog } from "../hooks/useBlogs";
 import BlogCard from "./BlogCard";
+
 
 const TopPickGird = () => {
   const { data, error, isLoading } = useBlogs();
