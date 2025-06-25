@@ -18,7 +18,7 @@ export function HeroSection() {
   const textColor = useColorModeValue("gray.900", "white");
 
   return (
-    <Box as="section" bg={bg} py={{ base: 12, md: 24 }}>
+    <Box as="section" bg={bg} py={{ base: 12, md: 24 }} height="400px">
       <Container maxW="container.lg">
         <Flex
           direction={{ base: "column", md: "row" }}

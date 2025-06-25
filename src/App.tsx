@@ -2,6 +2,7 @@ import "./App.css";
 import { Grid, GridItem } from "@chakra-ui/react";
 import Navbar from "./components/Navbar";
 import { HeroSection } from "./components/HeroComponent";
+import TopPickGird from "./components/TopPickGird";
 
 function App() {
   return (
@@ -22,13 +23,18 @@ function App() {
         <HeroSection />
       </GridItem>
 
-      <GridItem area="side" bg="gold" display={{ base: "none", lg: "block" }}>
-        Side
+      <GridItem area="side" display={{ base: "none", lg: "block" }}>
+        <TopPickGird />
       </GridItem>
 
-      <GridItem area="bottom" bg="yellow">
-        Bottom List
-      </GridItem>
+      <GridItem
+        marginTop={3}
+        height="600px"
+        area="bottom"
+        border="1px"
+        borderColor="gray"
+        borderStyle="solid"
+      ></GridItem>
     </Grid>
   );
 }
