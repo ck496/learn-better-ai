@@ -13,10 +13,11 @@ const BlogCard = ({ blog, variant }: Props) => {
       {variant === "blog-grid" ? <Image src={logo} /> : null}
       <Card.Body>
         <HStack justifyContent="space-between">
-          <Text>{blog.topic}</Text>
-          <Text>{blog.rating}</Text>
+          <Text fontSize="sm" color="#9764e7">
+            {blog.topic}
+          </Text>
         </HStack>
-        <Heading fontSize="lg" textAlign="left">
+        <Heading fontSize="md" textAlign="left">
           {blog.title}
         </Heading>
       </Card.Body>
