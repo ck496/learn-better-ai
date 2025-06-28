@@ -13,12 +13,12 @@ import {
 
 import { useColorModeValue } from "./ui/color-mode";
 
-export function HeroSection() {
+const HeroSection = () => {
   const bg = useColorModeValue("gray.50", "gray.800");
   const textColor = useColorModeValue("gray.900", "white");
 
   return (
-    <Box as="section" bg={bg} py={{ base: 12, md: 24 }} height="400px">
+    <Box as="section" bg={bg} py={{ base: 12, md: 24 }}>
       <Container maxW="container.lg">
         <Flex
           direction={{ base: "column", md: "row" }}
@@ -50,4 +50,6 @@ export function HeroSection() {
       </Container>
     </Box>
   );
-}
+};
+
+export default HeroSection;

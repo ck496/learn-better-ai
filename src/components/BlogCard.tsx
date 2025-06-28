@@ -14,6 +14,7 @@ const BlogCard = ({ blog, type }: Props) => {
       marginX={2}
       marginY={1}
       variant={type === "blog-grid" ? "elevated" : "subtle"}
+      
     >
       {/* {type === "blog-grid" ? <Image src={logo} /> : null} */}
       <Card.Body>
