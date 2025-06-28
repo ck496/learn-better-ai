@@ -8,8 +8,8 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar from "./Navbar";
-import TopPickGird from "./TopPickGird";
+import Navbar from "../components/Navbar";
+import TopPickGird from "../components/TopPickGird";
 
 const Layout = () => {
   const { pathname } = useLocation();

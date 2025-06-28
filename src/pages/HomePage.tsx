@@ -1,9 +1,9 @@
 import { Container, Grid, GridItem, HStack } from "@chakra-ui/react";
 import React from "react";
-import HeroSection from "./HeroSection";
-import BottomBlogsGrid from "./BottomBlogsGrid";
-import Navbar from "./Navbar";
-import TopPickGird from "./TopPickGird";
+import HeroSection from "../components/HeroSection";
+import BottomBlogsGrid from "../components/BottomBlogsGrid";
+import Navbar from "../components/Navbar";
+import TopPickGird from "../components/TopPickGird";
 
 const HomePage = () => {
   return (

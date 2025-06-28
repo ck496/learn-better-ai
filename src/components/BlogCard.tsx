@@ -2,6 +2,7 @@ import React from "react";
 import { Blog } from "../hooks/useBlogs";
 import { Card, CardBody, HStack, Image, Text, Heading } from "@chakra-ui/react";
 import logo from "../assets/mainIcon.webp";
+import BlogLikes from "./BlogLikes";
 
 interface Props {
   blog: Blog;
@@ -14,14 +15,14 @@ const BlogCard = ({ blog, type }: Props) => {
       marginX={2}
       marginY={1}
       variant={type === "blog-grid" ? "elevated" : "subtle"}
-      
     >
       {/* {type === "blog-grid" ? <Image src={logo} /> : null} */}
       <Card.Body>
         <HStack justifyContent="space-between">
-          <Text fontSize="sm" color="#4b189b">
+          <Text fontSize="xs" color="#4b189b">
             {blog.topic}
           </Text>
+          <BlogLikes rating={blog.rating} />
         </HStack>
         <Heading fontSize="md" textAlign="left">
           {blog.title}

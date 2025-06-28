@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Layout from "./components/Layout";
-import HomePage from "./components/HomePage";
+import Layout from "./layouts/MainLayout";
+import HomePage from "./pages/HomePage";
 
 // Lazy-load detail view to reduce initial bundle size.
 const BlogDetail = React.lazy(() => import("./components/BlogDetail"));
