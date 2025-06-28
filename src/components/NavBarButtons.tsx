@@ -1,9 +1,17 @@
 import { Button, ButtonProps } from "@chakra-ui/react";
-import React from "react";
+import { Link } from "react-router-dom";
+import { NavButtonValues } from "../data/navButtonValues";
 
-const NavBarButtons = (props: ButtonProps) => {
+interface NavButtonProps extends ButtonProps {
+  buttonValue: NavButtonValues;
+}
+const NavBarButtons = ({ buttonValue, ...props }: NavButtonProps) => {
   return (
-    <Button variant="ghost" size="sm" paddingX={2} minWidth="auto" {...props} />
+    <Link key={buttonValue.path} to={buttonValue.path}>
+      <Button variant="ghost" size="sm" paddingX={2} minWidth="auto" {...props}>
+        {buttonValue.label}
+      </Button>
+    </Link>
   );
 };
 
