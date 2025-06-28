@@ -6,7 +6,7 @@ import BlogCard from "./BlogCard";
 const BottomBlogsGrid = () => {
   const { data, error, isLoading } = useBlogs();
   return (
-    <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} padding={2} gap={1}>
+    <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} gap={1}>
       {data.map((blog) => (
         <Link key={blog.id} to={`/blog/${blog.id}`}>
           <BlogCard blog={blog} type="blog-grid"></BlogCard>

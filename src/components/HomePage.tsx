@@ -17,7 +17,8 @@ const HomePage = () => {
         lg: "3fr 1fr",
       }}
       alignItems="stretch"
-      minH="100vh"
+      minH="100vh" //ensures that container is at least as tall as the browser window
+      padding={2}
     >
       <GridItem area="main" h="100%" marginTop={1} marginBottom={2}>
         <HeroSection />
