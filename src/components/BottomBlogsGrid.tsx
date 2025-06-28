@@ -8,7 +8,7 @@ const BottomBlogsGrid = () => {
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} padding="10px" gap={1}>
       {data.map((blog) => (
-        <BlogCard blog={blog} variant="blog-grid"></BlogCard>
+        <BlogCard blog={blog} type="blog-grid"></BlogCard>
       ))}
     </SimpleGrid>
   );

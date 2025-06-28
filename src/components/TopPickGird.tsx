@@ -12,7 +12,6 @@ import { FaTrophy } from "react-icons/fa";
 import useBlogs, { Blog } from "../hooks/useBlogs";
 import BlogCard from "./BlogCard";
 
-
 const TopPickGird = () => {
   const { data, error, isLoading } = useBlogs();
   return (
@@ -25,7 +24,7 @@ const TopPickGird = () => {
       <SimpleGrid height="360px" overflowY="auto">
         <List.Root>
           {data.map((blog) => (
-            <BlogCard blog={blog} variant="side-grid"></BlogCard>
+            <BlogCard blog={blog} type="side-grid"></BlogCard>
           ))}
         </List.Root>
       </SimpleGrid>
