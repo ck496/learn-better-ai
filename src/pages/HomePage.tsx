@@ -1,7 +1,7 @@
 import { Container, Grid, GridItem, HStack } from "@chakra-ui/react";
 import React from "react";
 import HeroSection from "../components/HeroSection";
-import BottomBlogsGrid from "../components/BottomBlogsGrid";
+import BlogsGrid from "../components/BlogsGrid";
 import Navbar from "../components/Navbar";
 import TopPickGird from "../components/TopPickGird";
 
@@ -35,7 +35,7 @@ const HomePage = () => {
       </GridItem>
 
       <GridItem marginTop={3} height="600px" area="bottom">
-        <BottomBlogsGrid />
+        <BlogsGrid />
       </GridItem>
     </Grid>
   );

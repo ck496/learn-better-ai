@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useBlogs from "../hooks/useBlogs";
 import BlogCard from "./BlogCard";
 
-const BottomBlogsGrid = () => {
+const BlogsGrid = () => {
   const { data, error, isLoading } = useBlogs();
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} gap={1}>
@@ -16,4 +16,4 @@ const BottomBlogsGrid = () => {
   );
 };
 
-export default BottomBlogsGrid;
+export default BlogsGrid;

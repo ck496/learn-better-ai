@@ -1,6 +1,6 @@
 import "./App.css";
 
-import AppRoutes from "./Routes";
+import AppRoutes from "./AppRoutes";
 
 export interface BlogQuery {
   id: number | null;
