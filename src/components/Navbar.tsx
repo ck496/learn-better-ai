@@ -7,9 +7,9 @@ import NavBarButtons from "./NavBarButtons";
 const Navbar = () => {
   const navBarTitles = ["Home", "Notes", "Tools", "Leaderboards", "About"];
   return (
-    <Flex as="nav" paddingX={4} paddingY={2} gap={0}>
+    <Flex as="nav" paddingX={1} marginBottom={4}>
       <HStack gap={1} align="center">
-        <Image src={logo} boxSize="50px"></Image>
+        <Image src={logo} boxSize="50px" marginRight={2}></Image>
         {navBarTitles.map((title) => (
           <NavBarButtons key={title}>{title}</NavBarButtons>
         ))}

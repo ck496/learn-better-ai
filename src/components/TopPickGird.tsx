@@ -15,8 +15,8 @@ import BlogCard from "./BlogCard";
 const TopPickGird = () => {
   const { data, error, isLoading } = useBlogs();
   return (
-    <Box>
-      <HStack justify="center" gap={2}>
+    <Box marginLeft={2}>
+      <HStack justify="center" gap={2} marginBottom={2}>
         <Icon as={FaTrophy} boxSize="20px" color="#f0bc00" />
         <Heading>Top Picks</Heading>
       </HStack>
