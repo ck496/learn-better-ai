@@ -10,21 +10,17 @@ const HomePage = () => {
     <Grid
       templateAreas={{
         base: `"main" "bottom"`,
-        lg: `"main side" "bottom bottom"`, //For devices larger than 1020 px show side bar etc
+        lg: `"main main" "bottom bottom"`, //For devices larger than 1020 px show side bar etc
       }}
       templateColumns={{
         base: "1fr",
-        lg: "3fr 1fr",
+        lg: "1fr",
       }}
       alignItems="stretch"
       minH="100vh" //ensures that container is at least as tall as the browser window
     >
       <GridItem area="main" h="100%">
         <HeroSection />
-      </GridItem>
-
-      <GridItem area="side" display={{ base: "none", lg: "block" }} h="100%">
-        <TopPickGird />
       </GridItem>
 
       <GridItem area="bottom">
