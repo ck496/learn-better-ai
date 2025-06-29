@@ -10,6 +10,7 @@ import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import TopPickGird from "../components/TopPickGird";
+import SideBar from "../components/SideBar";
 
 const Layout = () => {
   const { pathname } = useLocation();
@@ -23,7 +24,7 @@ const Layout = () => {
       }}
       templateColumns={{
         base: "1fr",
-        lg: isHome ? "1fr" : "1fr 5fr",
+        lg: isHome ? "1fr" : "1fr 6fr",
       }}
     >
       {/* Always Render Navbar */}
@@ -33,16 +34,8 @@ const Layout = () => {
 
       {/* for non homepages, render a side bar */}
       {!isHome && (
-        <GridItem area="side" display={{ base: "none", lg: "block" }}>
-          <VStack>
-            <Heading size="xl" textAlign="left">
-              Side Bar
-            </Heading>
-            <Text>Option a</Text>
-            <Text>Option b</Text>
-            <Text>Option c</Text>
-            <Text>Option d</Text>
-          </VStack>
+        <GridItem area="side">
+          <SideBar />
         </GridItem>
       )}
 
