@@ -5,6 +5,7 @@ import {
   Heading,
   VStack,
   HStack,
+  Center,
 } from "@chakra-ui/react";
 import React from "react";
 import { Navigate, useParams } from "react-router-dom";
@@ -17,12 +18,14 @@ const BlogDetail = () => {
   if (!blog) return <Navigate to="/" replace />; // guard for bad IDs
 
   return (
-    <Container>
-      <VStack
-        gap={6}
-        align={"start"} //hug the left edge of the stack
-      >
-        <Heading as="h1">{blog.title}</Heading>
+    <Box marginTop={4} px={4} py={2}>
+      <VStack gap={6}>
+        <Center>
+          <Heading fontSize="3xl" textAlign="center">
+            {blog.title}
+          </Heading>
+        </Center>
+
         {/* Meta row: topic + rating */}
         <HStack justifyContent="space-between" gap={5}>
           <Text fontSize="xs" color="#4b189b">
@@ -31,9 +34,9 @@ const BlogDetail = () => {
           <BlogLikes rating={blog.rating} />
         </HStack>
         {/* Body copy */}
-        <Text>{blog.body}</Text>
+        <Text textAlign="left">{blog.body}</Text>
       </VStack>
-    </Container>
+    </Box>
   );
 };
 
