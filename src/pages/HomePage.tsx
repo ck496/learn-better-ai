@@ -18,23 +18,16 @@ const HomePage = () => {
       }}
       alignItems="stretch"
       minH="100vh" //ensures that container is at least as tall as the browser window
-      padding={2}
     >
-      <GridItem area="main" h="100%" marginTop={1} marginBottom={2}>
+      <GridItem area="main" h="100%">
         <HeroSection />
       </GridItem>
 
-      <GridItem
-        area="side"
-        display={{ base: "none", lg: "block" }}
-        h="100%"
-        marginTop={1}
-        marginBottom={2}
-      >
+      <GridItem area="side" display={{ base: "none", lg: "block" }} h="100%">
         <TopPickGird />
       </GridItem>
 
-      <GridItem marginTop={3} height="600px" area="bottom">
+      <GridItem area="bottom">
         <BlogsGrid />
       </GridItem>
     </Grid>

@@ -14,7 +14,7 @@ import {
 import { useColorModeValue } from "./ui/color-mode";
 
 const HeroSection = () => {
-  const bg = useColorModeValue("gray.200", "gray.800");
+  const bg = useColorModeValue("gray.300", "gray.800");
   const textColor = useColorModeValue("gray.900", "white");
 
   return (
@@ -25,6 +25,7 @@ const HeroSection = () => {
           align="center"
           justify="space-between"
           gap={{ base: 8, md: 16 }}
+          padding={4}
         >
           {/* Text Column */}
           <Box flex="1">
@@ -35,7 +36,7 @@ const HeroSection = () => {
               Instantly convert your Markdown notes into engaging, expert-level
               blog posts—tailored to any reader’s expertise.
             </Text>
-            <HStack justify="center" gap={5}>
+            <HStack justify="center" gap={5} p={4}>
               <Button colorScheme="blue" size="lg" borderRadius={50}>
                 Get Started
               </Button>

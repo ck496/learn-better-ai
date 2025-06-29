@@ -18,7 +18,7 @@ const TopPickGird = () => {
   const topPicks = data.sort((a, b) => b.rating - a.rating).slice(0, 5);
 
   return (
-    <Box marginLeft={2} h="100%">
+    <Box marginTop={4} marginLeft={2} h="100%">
       <HStack justify="center" gap={2} marginBottom={2}>
         <Icon as={FaTrophy} boxSize="20px" color="#f0bc00" />
         <Heading>Top Picks</Heading>
