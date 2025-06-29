@@ -1,6 +1,7 @@
 import { Input, InputGroup } from "@chakra-ui/react";
 import { LucideSearch } from "lucide-react";
 import { useRef } from "react";
+import { useColorModeValue } from "./ui/color-mode";
 
 const SearchInput = () => {
   const ref = useRef<HTMLInputElement>(null);
@@ -20,6 +21,7 @@ const SearchInput = () => {
           borderRadius={20}
           placeholder="Search content..."
           variant="subtle"
+          bg={useColorModeValue("gray.210", "gray.950")}
         ></Input>
       </InputGroup>
     </form>
