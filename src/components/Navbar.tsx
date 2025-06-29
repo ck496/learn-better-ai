@@ -4,11 +4,12 @@ import { navButtonValues } from "../data/navButtonValues";
 import SearchInput from "./SearchInput";
 import ColorModeToggle from "./ColorModeToggle";
 import NavBarButtons from "./NavBarButtons";
+import { useColorModeValue } from "./ui/color-mode";
 
 const Navbar = () => {
   const navBarTitles = ["Home", "Notes", "Tools", "Leaderboards", "About"];
   return (
-    <Flex as="nav" paddingX={1} marginBottom={4}>
+    <Flex as="nav" px={4} py={2} bg={useColorModeValue("gray.200", "gray.900")}>
       <HStack gap={1} align="center">
         <Image src={logo} boxSize="50px" marginRight={2}></Image>
         {navButtonValues.map((value) => (
