@@ -1,14 +1,8 @@
 import { Container, VStack, Text, Heading } from "@chakra-ui/react";
+import UploadMd from "../components/UploadMd";
 
 const NotesPage = () => {
-  return (
-    <Container>
-      <VStack>
-        <Heading as="h1">Notes Page</Heading>
-        <Text>You can add your notes here</Text>
-      </VStack>
-    </Container>
-  );
+  return <UploadMd />;
 };
 
 export default NotesPage;
